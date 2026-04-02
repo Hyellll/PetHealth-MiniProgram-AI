@@ -29,10 +29,10 @@
 - **Workflow**: ChatGPT-4o / Claude 3.5 (技术路线决策与代码生成)
 
 ## 📸 预览 (Showcase)
-
-> [!TIP]
-> **请在此处上传并贴入你的小程序模拟器截图（建议包含：首页、记录中心、趋势图）**
-> 截图方法：右键点击 README 页面选择上传，或者直接将图片拖拽进编辑框。
+<img width="628" height="1344" alt="66a38f70-b37a-42fe-8195-5b47c70726e3" src="https://github.com/user-attachments/assets/3841530b-a348-4e41-90c5-3f5915fa5997" />
+<img width="610" height="1286" alt="c8faec99-6b4e-49e6-b270-81be3f8d4034" src="https://github.com/user-attachments/assets/01655d8b-dfee-430e-9eea-14857c93ff4b" />
+<img width="610" height="1296" alt="0e7dad02-00f0-4771-9093-660d6e5c8eb9" src="https://github.com/user-attachments/assets/1343c24e-3b6b-4295-b472-c1cdf78ab929" />
+<img width="614" height="1288" alt="57483883-49ef-4862-ae34-99128a495a6a" src="https://github.com/user-attachments/assets/c285f334-8df4-42e4-af42-8af72658d673" />
 
 ## 🚀 开发者心得
 
