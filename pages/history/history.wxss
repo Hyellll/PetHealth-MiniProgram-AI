@@ -1,0 +1,51 @@
+.page-history { background: #f8f8f8; height: 100vh; display: flex; flex-direction: column; }
+
+.custom-header { background: #a393d3; color: white; padding: 100rpx 40rpx 40rpx; flex-shrink: 0; }
+.header-top { display: flex; justify-content: space-between; align-items: center; }
+.page-title { font-size: 34rpx; font-weight: bold; }
+
+.main-scroll { flex: 1; height: 0; }
+
+/* 第一层：列表样式 */
+.summary-list { padding: 30rpx; }
+.summary-item {
+  background: white; border-radius: 30rpx; padding: 35rpx;
+  display: flex; align-items: center; margin-bottom: 25rpx;
+  box-shadow: 0 4rpx 15rpx rgba(0,0,0,0.02);
+}
+.item-left { flex: 1; }
+.day-text { font-size: 32rpx; font-weight: bold; color: #333; display: block; }
+.week-text { font-size: 22rpx; color: #aaa; margin-top: 5rpx; }
+
+.status-icons { display: flex; gap: 15rpx; margin-right: 30rpx; }
+.s-icon { font-size: 30rpx; opacity: 0.2; filter: grayscale(1); }
+.s-icon.active { opacity: 1; filter: grayscale(0); } /* 有记录则点亮 */
+
+.arrow-r { color: #ddd; font-size: 24rpx; }
+
+/* 第二层：详情样式 */
+.detail-container { padding: 30rpx; }
+.day-banner { text-align: center; color: #999; font-size: 26rpx; margin-bottom: 40rpx; }
+
+.history-card {
+  background: white; border-radius: 35rpx; padding: 30rpx; margin-bottom: 25rpx;
+  border-left: 8rpx solid #a393d3;
+}
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15rpx; }
+.card-type { font-size: 26rpx; font-weight: 900; }
+.card-type.med { color: #4361ee; }
+.card-type.food { color: #f77f00; }
+.card-type.water { color: #0077b6; }
+.card-type.excre { color: #db2777; }
+.card-time { font-size: 22rpx; color: #ccc; }
+.card-content { font-size: 30rpx; color: #444; line-height: 1.6; }
+
+.back-to-list-btn {
+  margin-top: 60rpx; text-align: center; color: #a393d3; font-size: 28rpx; text-decoration: underline;
+  padding-bottom: 60rpx;
+}
+
+.detail-fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20rpx); } to { opacity: 1; transform: translateY(0); } }
+
+.empty { text-align: center; color: #ccc; padding-top: 200rpx; font-size: 28rpx; }

@@ -1,0 +1,30 @@
+/**app.wxss**/
+page {
+  /* 暖香芋紫：明亮、温馨、带有阳光感 */
+  --main-color: #a78dfa; 
+  --main-gradient: linear-gradient(135deg, #a78dfa 0%, #c4b5fd 100%);
+  
+  background-color: #fcfaff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+}
+
+/* 统一的导航返回图标 */
+.nav-back-wrap {
+  width: 70rpx; height: 70rpx;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.nav-back-icon {
+  width: 20rpx; height: 20rpx;
+  border-left: 5rpx solid #fff;
+  border-bottom: 5rpx solid #fff;
+  transform: rotate(45deg);
+  margin-left: 8rpx;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; color: transparent; }

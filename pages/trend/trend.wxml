@@ -1,0 +1,42 @@
+<view class="page-trend">
+  <!-- 1. 顶部紫色页眉 -->
+  <view class="custom-header">
+    <view class="header-top">
+      <view class="nav-back-wrap" bindtap="goBack">
+        <view class="nav-back-icon"></view>
+      </view>
+      <view class="pet-info-title">
+        <text class="name">{{petName}}</text>
+        <text class="tag">趋势分析</text>
+      </view>
+      <view style="width: 70rpx;"></view>
+    </view>
+
+    <!-- 2. 【核心】无边框切换按钮 -->
+    <view class="mode-selector-wrap">
+      <view class="mode-btn" bindtap="showModeMenu">
+        <text class="current-mode">{{currentModeLabel}}趋势</text>
+        <text class="arrow-down">▼</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="chart-container">
+    <!-- ECharts 图表容器 -->
+    <view class="chart-box">
+      <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+    </view>
+
+    <!-- 图例说明（仅在“全部趋势”模式下显示） -->
+    <view class="legend-box" wx:if="{{currentMode === 'all'}}">
+      <view class="legend-item"><text class="dot med"></text>用药</view>
+      <view class="legend-item"><text class="dot food"></text>饮食</view>
+      <view class="legend-item"><text class="dot water"></text>饮水</view>
+      <view class="legend-item"><text class="dot excre"></text>排泄</view>
+    </view>
+  </view>
+
+  <view class="tips-box">
+    <text>提示：系统会自动根据你录入内容中的数字生成曲线。点击上方文字可切换查看单一项目或综合趋势。</text>
+  </view>
+</view>

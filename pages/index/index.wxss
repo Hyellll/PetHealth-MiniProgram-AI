@@ -1,0 +1,37 @@
+.page-home { background: #fcfaff; height: 100vh; display: flex; flex-direction: column; }
+
+.custom-header { 
+  background: var(--main-color); color: white; 
+  padding: 120rpx 50rpx 80rpx;
+  border-radius: 0 0 70rpx 70rpx;
+  box-shadow: 0 10rpx 30rpx rgba(167, 141, 250, 0.3);
+}
+.greeting { font-size: 26rpx; opacity: 0.9; display: block; }
+.app-name { font-size: 52rpx; font-weight: 900; margin-top: 10rpx; display: block; text-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05); }
+
+.main-content { flex: 1; height: 0; padding: 40rpx; box-sizing: border-box; }
+.section-title { font-size: 32rpx; font-weight: bold; color: #4a4a4a; margin-bottom: 30rpx; }
+
+.pet-card-new {
+  background: white; border-radius: 45rpx; padding: 45rpx; margin-bottom: 30rpx;
+  display: flex; align-items: center;
+  box-shadow: 0 8rpx 25rpx rgba(0,0,0,0.03);
+}
+.pet-avatar-wrap {
+  width: 100rpx; height: 100rpx; background: #f5f3ff;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  margin-right: 30rpx;
+}
+.avatar-emoji { font-size: 50rpx; }
+.pet-detail { flex: 1; }
+.pet-name { font-size: 38rpx; font-weight: bold; color: #333; display: block; }
+.pet-status { font-size: 24rpx; color: #bbb; margin-top: 8rpx; }
+.arrow-right { color: #eee; font-size: 30rpx; }
+
+.fab-btn {
+  position: fixed; bottom: 60rpx; right: 60rpx;
+  width: 130rpx; height: 130rpx; background: var(--main-color);
+  color: white; border-radius: 50%; font-size: 70rpx;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 15rpx 35rpx rgba(167, 141, 250, 0.4);
+}

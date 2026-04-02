@@ -1,0 +1,31 @@
+.page-record { background: #fcfaff; height: 100vh; display: flex; flex-direction: column; }
+.custom-header { background: var(--main-color); color: white; padding: 100rpx 40rpx 60rpx; flex-shrink: 0; }
+.header-top { display: flex; justify-content: space-between; align-items: center; }
+.page-title { font-size: 34rpx; font-weight: bold; }
+.pet-name-banner { margin-top: 40rpx; font-size: 28rpx; opacity: 0.9; text-align: center; }
+.highlight { font-weight: bold; font-size: 32rpx; border-bottom: 4rpx solid rgba(255,255,255,0.5); }
+.record-content { flex: 1; height: 0; }
+.scroll-inner { padding: 30rpx; }
+.record-card {
+  background: white; border-radius: 40rpx; padding: 35rpx; margin-bottom: 30rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0,0,0,0.03);
+}
+.card-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30rpx; }
+.title-left { display: flex; align-items: center; font-weight: bold; font-size: 30rpx; color: #333; }
+.icon-bg { 
+  width: 70rpx; height: 70rpx; border-radius: 22rpx; 
+  display: flex; align-items: center; justify-content: center; 
+  margin-right: 20rpx; font-size: 38rpx;
+}
+.icon-bg.med { background: #eef2ff; color: #818cf8; }
+.icon-bg.food { background: #fffbeb; color: #f59e0b; }
+.icon-bg.water { background: #e0f2fe; color: #0ea5e9; }
+.icon-bg.excre { background: #fdf2f8; color: #ec4899; }
+.icon-bg.custom { background: #f8f8f8; color: #666; }
+
+.styled-input { background: #f8f8f8; padding: 30rpx; border-radius: 25rpx; font-size: 28rpx; margin-bottom: 25rpx; }
+.add-sub-btn { background: var(--main-color); color: white; text-align: center; padding: 22rpx; border-radius: 25rpx; font-size: 28rpx; font-weight: bold; }
+.add-card-placeholder {
+  border: 4rpx dashed #e5e7eb; border-radius: 40rpx; padding: 45rpx; text-align: center; color: #999; font-size: 26rpx; display: flex; align-items: center; justify-content: center;
+}
+.plus { font-size: 44rpx; margin-right: 20rpx; }

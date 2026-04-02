@@ -1,0 +1,69 @@
+/* pages/detail/detail.wxss */
+.page-detail { background: #fcfaff; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+/* 1. 顶部紫色页眉 */
+.custom-header { 
+  background: var(--main-color); color: white; 
+  padding: 100rpx 40rpx 70rpx;
+}
+.header-top { display: flex; justify-content: space-between; align-items: center; }
+.pet-info-title .name { font-size: 44rpx; font-weight: 900; text-align: center; display: block; }
+.pet-info-title .tag { font-size: 24rpx; opacity: 0.8; text-align: center; display: block; }
+
+.header-bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 50rpx; }
+.date { font-size: 34rpx; font-weight: bold; }
+.day { font-size: 26rpx; opacity: 0.8; }
+
+.header-btns { display: flex; flex-direction: column; align-items: flex-end; }
+.mini-btn { 
+  font-size: 24rpx; background: rgba(255,255,255,0.25); 
+  padding: 12rpx 25rpx; border-radius: 40rpx; margin-bottom: 15rpx; 
+}
+
+/* 2. 内容区 */
+.main-content { flex: 1; padding: 30rpx; box-sizing: border-box; }
+
+/* 记录入口大卡片 */
+.entry-card {
+  background: var(--main-gradient);
+  padding: 60rpx 45rpx; border-radius: 45rpx;
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 40rpx;
+  box-shadow: 0 15rpx 35rpx rgba(167, 141, 250, 0.2);
+  color: white;
+}
+.entry-title { font-size: 40rpx; font-weight: bold; display: block; }
+.entry-desc { font-size: 24rpx; opacity: 0.9; margin-top: 10rpx; display: block; }
+.entry-icon { font-size: 70rpx; }
+
+/* 3. 动态流水列表 */
+.history-section { background: white; border-radius: 45rpx; padding: 45rpx; }
+.section-header { font-size: 28rpx; color: #999; margin-bottom: 40rpx; font-weight: bold; }
+
+.record-item { display: flex; padding-bottom: 45rpx; position: relative; }
+.item-left { display: flex; flex-direction: column; align-items: center; margin-right: 25rpx; }
+.dot { width: 18rpx; height: 18rpx; background: var(--main-color); border-radius: 50%; z-index: 2; margin-top: 10rpx;}
+.line { width: 4rpx; flex: 1; background: #f5f3ff; margin-top: 10rpx; }
+
+.record-body { flex: 1; background: #fafafa; padding: 25rpx; border-radius: 25rpx; }
+.record-top { margin-bottom: 12rpx; display: flex; align-items: center; justify-content: space-between; }
+
+/* 重点优化：所有标签的彩色定义 */
+.r-type { font-size: 24rpx; font-weight: 900; padding: 6rpx 16rpx; border-radius: 10rpx; }
+
+/* 用药 - 靛蓝色 */
+.r-type.med { color: #818cf8; background: #eef2ff; }
+/* 饮食 - 琥珀橘 */
+.r-type.food { color: #f59e0b; background: #fffbeb; }
+/* 饮水 - 亮蓝色 (新加) */
+.r-type.water { color: #0ea5e9; background: #e0f2fe; }
+/* 排泄 - 玫红色 (新加) */
+.r-type.excre { color: #ec4899; background: #fdf2f8; }
+/* 自定义 - 灰色 */
+.r-type.custom { color: #666; background: #f3f4f6; }
+
+.r-time { font-size: 22rpx; color: #bbb; }
+.r-content { font-size: 32rpx; color: #333; font-weight: 500; margin-top: 10rpx; display: block; }
+
+.delete-icon { color: #ddd; font-size: 44rpx; padding-left: 20rpx; }
+.empty { text-align: center; color: #ccc; font-size: 26rpx; padding: 60rpx 0; }

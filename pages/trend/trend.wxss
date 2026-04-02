@@ -1,0 +1,41 @@
+.page-trend { background: #f8f8f8; height: 100vh; display: flex; flex-direction: column; }
+
+.custom-header { background: #a393d3; color: white; padding: 100rpx 40rpx 60rpx; flex-shrink: 0; }
+.header-top { display: flex; justify-content: space-between; align-items: center; }
+.pet-info-title .name { font-size: 38rpx; font-weight: bold; display: block; text-align: center; }
+.pet-info-title .tag { font-size: 22rpx; opacity: 0.8; display: block; text-align: center; }
+
+/* 无边框按钮样式 */
+.mode-selector-wrap {
+  margin-top: 50rpx;
+  display: flex; justify-content: center;
+}
+.mode-btn {
+  display: flex; align-items: center;
+  padding: 10rpx 20rpx;
+}
+.current-mode { font-size: 36rpx; font-weight: bold; margin-right: 15rpx; }
+.arrow-down { font-size: 20rpx; opacity: 0.7; }
+
+/* 图表容器 */
+.chart-container {
+  flex: 1; background: white; margin: -30rpx 30rpx 30rpx;
+  border-radius: 40rpx; padding: 40rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0,0,0,0.03);
+  display: flex; flex-direction: column;
+}
+.chart-box { width: 100%; height: 650rpx; }
+
+/* 图例样式 */
+.legend-box {
+  display: flex; justify-content: space-around; margin-top: 30rpx;
+  padding: 20rpx; background: #fafafa; border-radius: 20rpx;
+}
+.legend-item { font-size: 24rpx; color: #666; display: flex; align-items: center; }
+.dot { width: 16rpx; height: 16rpx; border-radius: 50%; margin-right: 10rpx; }
+.dot.med { background: #4361ee; }
+.dot.food { background: #f77f00; }
+.dot.water { background: #0077b6; }
+.dot.excre { background: #db2777; }
+
+.tips-box { padding: 40rpx; font-size: 24rpx; color: #999; line-height: 1.6; }

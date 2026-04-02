@@ -1,0 +1,45 @@
+<view class="page-record">
+  <!-- 1. 顶部紫色页眉 -->
+  <view class="custom-header">
+    <view class="header-top">
+      <view class="nav-back-wrap" bindtap="goBack">
+        <view class="nav-back-icon"></view>
+      </view>
+      <text class="page-title">记录中心</text>
+      <view style="width: 70rpx;"></view> <!-- 占位平衡 -->
+    </view>
+    <view class="pet-name-banner">正在为 <text class="highlight">{{petName}}</text> 记录</view>
+  </view>
+
+  <scroll-view scroll-y class="record-content">
+    <view class="scroll-inner">
+      
+      <!-- 循环渲染卡片 -->
+      <view wx:for="{{cardList}}" wx:key="type" class="record-card" bindlongpress="removeCard" data-index="{{index}}">
+        <view class="card-title">
+          <view class="title-left">
+            <text class="icon-bg {{item.typeClass}}">{{item.icon}}</text>
+            <text>{{item.label}}</text>
+          </view>
+          <text class="status-tag">长按移除</text>
+        </view>
+        <view class="input-area">
+          <input class="styled-input" 
+                 placeholder="{{item.placeholder}}" 
+                 bindinput="onCardInput" 
+                 data-type="{{item.type}}"
+                 value="{{inputValues[item.type]}}" />
+          <view class="add-sub-btn" bindtap="saveRecord" data-type="{{item.type}}" data-label="{{item.label}}">记录一下</view>
+        </view>
+      </view>
+
+      <!-- 增加自定义卡片按钮 -->
+      <view class="add-card-placeholder" bindtap="addNewCardCustom">
+        <text class="plus">+</text>
+        <text>增加自定义管理卡片 (运动、心情评分等)</text>
+      </view>
+
+      <view class="bottom-tips">所有记录将实时同步至详情页动态流</view>
+    </view>
+  </scroll-view>
+</view>

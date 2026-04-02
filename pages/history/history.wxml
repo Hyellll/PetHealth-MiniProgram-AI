@@ -1,0 +1,53 @@
+<view class="page-history">
+  <!-- 1. 顶部紫色页眉 -->
+  <view class="custom-header">
+    <view class="header-top">
+      <!-- 统一的返回按钮：如果在详情态则返回列表，在列表态则返回首页 -->
+      <view class="nav-back-wrap" bindtap="handleBack">
+        <view class="nav-back-icon"></view>
+      </view>
+      <text class="page-title">{{isDetailMode ? selectedDate + ' 详情' : '往期回顾'}}</text>
+      <view style="width: 70rpx;"></view>
+    </view>
+  </view>
+
+  <!-- 2. 第一层：日期汇总列表 -->
+  <scroll-view wx:if="{{!isDetailMode}}" scroll-y class="main-scroll">
+    <view class="summary-list">
+      <view wx:for="{{groupedList}}" wx:key="date" class="summary-item" bindtap="viewDayDetail" data-date="{{item.date}}">
+        <view class="item-left">
+          <text class="day-text">{{item.date}}</text>
+          <text class="week-text">{{item.dayOfWeek}}</text>
+        </view>
+        
+        <!-- 四个基础情况的图标点亮逻辑 -->
+        <view class="status-icons">
+          <text class="s-icon {{item.hasMed ? 'active' : ''}}">💊</text>
+          <text class="s-icon {{item.hasFood ? 'active' : ''}}">🍖</text>
+          <text class="s-icon {{item.hasWater ? 'active' : ''}}">💧</text>
+          <text class="s-icon {{item.hasExcre ? 'active' : ''}}">💩</text>
+        </view>
+        <view class="arrow-r">></view>
+      </view>
+
+      <view wx:if="{{groupedList.length === 0}}" class="empty">暂无历史记录记录</view>
+    </view>
+  </scroll-view>
+
+  <!-- 3. 第二层：某日具体流水卡片 (点击进入后显示) -->
+  <scroll-view wx:else scroll-y class="main-scroll detail-fade-in">
+    <view class="detail-container">
+      <view class="day-banner">这是 {{petName}} 在 {{selectedDate}} 的表现</view>
+      
+      <view wx:for="{{dayRecords}}" wx:key="index" class="history-card">
+        <view class="card-top">
+          <text class="card-type {{item.typeClass}}">【{{item.typeLabel}}】</text>
+          <text class="card-time">{{item.time}}</text>
+        </view>
+        <view class="card-content">{{item.content}}</view>
+      </view>
+      
+      <view class="back-to-list-btn" bindtap="closeDetail">返回日期列表</view>
+    </view>
+  </scroll-view>
+</view>

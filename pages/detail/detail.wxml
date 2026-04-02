@@ -1,0 +1,57 @@
+<view class="page-detail">
+  <!-- 1. 顶部紫色页眉 -->
+  <view class="custom-header">
+    <view class="header-top">
+      <view class="nav-back-wrap" bindtap="goBack">
+        <view class="nav-back-icon"></view>
+      </view>
+      <view class="pet-info-title">
+        <text class="name">{{petName}}</text>
+        <text class="tag">健康助手</text>
+      </view>
+      <view class="more-icon">•••</view>
+    </view>
+    <view class="header-bottom">
+      <view class="date-box">
+        <text class="date">{{todayDate}}</text>
+        <text class="day">{{todayDay}}</text>
+      </view>
+      <view class="header-btns">
+        <view class="mini-btn" bindtap="goToTrend">趋势分析 ></view>
+        <view class="mini-btn" bindtap="goToHistory">历史记录 ></view>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view scroll-y class="main-content">
+    <!-- 2. 压缩后的记录入口：点击跳转到新页面 -->
+    <view class="entry-card" bindtap="goToRecordPage">
+      <view class="entry-left">
+        <text class="entry-title">今日记录中心</text>
+        <text class="entry-desc">录入用药、饮食、饮水、排泄情况</text>
+      </view>
+      <view class="entry-icon">✍️</view>
+    </view>
+
+    <!-- 3. 今日流水动态 -->
+    <view class="history-section">
+      <view class="section-header">今日实时动态流</view>
+      <view wx:for="{{records}}" wx:key="index" class="record-item">
+        <view class="item-left">
+          <view class="dot"></view>
+          <view class="line" wx:if="{{index !== records.length - 1}}"></view>
+        </view>
+        <view class="record-body">
+          <view class="record-top">
+            <text class="r-type {{item.typeClass}}">【{{item.typeLabel}}】</text>
+            <text class="r-time">{{item.time}}</text>
+          </view>
+          <view class="r-content">{{item.content}}</view>
+        </view>
+        <view class="delete-icon" bindtap="deleteSingle" data-index="{{index}}">×</view>
+      </view>
+      <view wx:if="{{records.length === 0}}" class="empty">今天还没有记录，点击上方按钮开始吧</view>
+    </view>
+    <view style="height: 100rpx;"></view>
+  </scroll-view>
+</view>
